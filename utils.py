@@ -21,6 +21,11 @@ def get_pages():
 
     return pages
 
+def get_page(id):
+    request = requests.get(url_pages + f"/{id}")
+    request_json = request.json()
+    return request_json
+
 def get_posts():
     request = requests.get(url_posts)
     request_json = request.json()
@@ -35,6 +40,11 @@ def get_posts():
     posts.sort(key=lambda x: x["id"])
 
     return posts
+
+def get_post(id):
+    request = requests.get(url_posts + f"/{id}")
+    request_json = request.json()
+    return request_json
 
 def get_last_page():
     pages = get_pages()
