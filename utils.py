@@ -1,8 +1,8 @@
 import requests
 from datetime import date, datetime, timedelta
 import time
+from credentials import PASSWORD, url, USER_NAME
 
-url = "https://maximofn.com/"
 url_pages = url + "wp-json/wp/v2/pages"
 url_posts = url + "wp-json/wp/v2/posts"
 
